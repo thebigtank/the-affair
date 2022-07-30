@@ -152,4 +152,10 @@ img {
 }
 .block.header .menu__main--is-active {
   color: #d4a373;
+}
+.block.header.active .hamburger .open {
+  display: none;
+}
+.block.header.active .hamburger .close {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

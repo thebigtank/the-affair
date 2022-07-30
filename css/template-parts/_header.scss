@@ -80,4 +80,17 @@
             color: $color-gold;
         }
     }
+
+    &.active {
+
+        .hamburger {
+            .open {
+                display: none;
+            }
+
+            .close {
+                display: block;
+            }
+        }
+    }
 }
