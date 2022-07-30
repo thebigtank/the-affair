@@ -1,0 +1,51 @@
+.block.header {
+
+    .wrapper {
+        @extend %site-wrapper;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem-calc(20) 0;
+    }
+
+    .col {
+        &.logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &.menu {
+            // flex: 1;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu__main {
+        display: flex;
+
+        &--item {
+            margin-left: rem-calc(28);
+
+            a {
+                text-transform: uppercase;
+                font-size: rem-calc(14);
+                font-weight: 600;
+            }
+
+        }
+
+        &--submenu {
+
+        }
+
+        &--active {
+
+        }
+    }
+}
