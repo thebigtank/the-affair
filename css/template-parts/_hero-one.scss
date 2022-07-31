@@ -1,0 +1,93 @@
+.block.hero__one {
+    
+    .wrapper {
+        @extend %site-wrapper;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .col {
+        &:nth-child(1) {
+            padding: rem-calc(42);
+            box-sizing: border-box;
+            @include flex(flex, center, flex-end);
+        }
+    }
+
+    .content {
+        text-align: right;
+        &__head {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: rem-calc(13);
+            margin-bottom: rem-calc(28);
+
+            &--tag {
+                display: inline-block;
+                position: relative;
+                color: $color-gold;
+                ion-icon {
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    bottom: 2px;
+                }
+            }
+
+            &--title {
+                letter-spacing: rem-calc(4);
+                margin-left: rem-calc(20);
+            }
+        }
+
+        &__title {
+            text-transform: capitalize;
+            font-size: rem-calc(26);
+            font-weight: 600;
+            line-height: rem-calc(30);
+            margin-bottom: rem-calc(18);
+        }
+        
+        &__details {
+            font-family: $font-noto;
+            text-transform: capitalize;
+            font-size: rem-calc(13);
+            margin-bottom: rem-calc(64);
+            &--date {
+                color: $color-lightgray;
+                font-size: rem-calc(12);
+            }
+            &--comment-count {
+                color: $color-gray-tertiary;
+                font-weight: 600;
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: rem-calc(12);
+            font-weight: 700;
+            @include flex(inline-flex, center, center);
+
+            span {
+                display: block;
+                margin-right: rem-calc(6);
+                border-bottom: 1px solid $color-gray;
+                padding-bottom: 2px;
+            }
+        }
+    }
+
+    .image {
+        max-width: 100%;
+        height: rem-calc(600);
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
