@@ -87,7 +87,7 @@ img {
   overflow: hidden;
 }
 
-.block.landing .wrapper, .block.header .wrapper {
+.block.hero .wrapper, .block.header .wrapper {
   margin-left: auto;
   margin-right: auto;
   max-width: 75rem;
@@ -181,7 +181,7 @@ img {
   padding-left: 1.5rem;
 }
 
-.block.landing {
+.block.hero {
   position: relative;
   height: 28.125rem;
   padding: 2.8125rem 0;
@@ -192,12 +192,12 @@ img {
   align-items: center;
   justify-content: initial;
 }
-@media screen and (max-width: 1024px) {
-  .block.landing {
+@media screen and (max-width: 768px) {
+  .block.hero {
     height: 21.875rem;
   }
 }
-.block.landing::before {
+.block.hero::before {
   content: "";
   background: #555555;
   opacity: 0.18;
@@ -208,29 +208,29 @@ img {
   height: 100%;
   mix-blend-mode: multiply;
 }
-.block.landing .wrapper {
+.block.hero .wrapper {
   position: relative;
 }
-.block.landing .title {
+.block.hero .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 10.9375rem;
+  font-size: 8.125rem;
   font-weight: 700;
   letter-spacing: 0.375rem;
   color: #f8f8f8;
 }
 @media screen and (max-width: 1200px) {
-  .block.landing .title {
-    font-size: 7.8125rem;
+  .block.hero .title {
+    font-size: 6.875rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .block.landing .title {
-    font-size: 5.9375rem;
+  .block.hero .title {
+    font-size: 5.625rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .block.landing .title {
-    font-size: 4.6875rem;
+  .block.hero .title {
+    font-size: 4.375rem;
   }
 }/*# sourceMappingURL=main.css.map */
