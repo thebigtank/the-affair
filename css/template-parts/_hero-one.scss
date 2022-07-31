@@ -2,11 +2,19 @@
     
     .wrapper {
         @extend %site-wrapper;
+
+        @media screen and (max-width: $tablet-large) {
+            padding: 0;
+        }
     }
 
     .row {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 1fr 2fr;
+
+        @media screen and (max-width: 930px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
     }
 
     .col {
@@ -14,77 +22,48 @@
             padding: rem-calc(42);
             box-sizing: border-box;
             @include flex(flex, center, flex-end);
+
+            @media screen and (max-width: $mobile) {
+                padding: rem-calc(22);
+            }
+        }
+
+        &:nth-child(2) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            @media screen and (max-width: 930px) {
+                grid-template-columns: auto;
+            }
         }
     }
 
     .content {
         text-align: right;
         position: relative;
-        &__head {
-            @include flex(flex, center, flex-end);
-            gap: rem-calc(10);
-            text-transform: uppercase;
-            font-size: rem-calc(12);
-            margin-bottom: rem-calc(28);
-
-            &--tag {
-                @include flex(inline-flex, center, flex-end);
-                font-weight: 600;
-                position: relative;
-                color: $color-gold;
-                strong {
-                    margin: 0 rem-calc(6);
-                }
-            }
-
-            &--title {
-                font-weight: 500;
-                letter-spacing: rem-calc(3);
-            }
-        }
-
-        &__title {
-            text-transform: capitalize;
-            font-size: rem-calc(26);
-            font-weight: 600;
-            line-height: rem-calc(30);
-            margin-bottom: rem-calc(18);
-        }
-        
-        &__details {
-            font-family: $font-noto;
-            text-transform: capitalize;
-            font-size: rem-calc(13);
-            margin-bottom: rem-calc(64);
-            &--date {
-                color: $color-lightgray;
-                font-size: rem-calc(12);
-            }
-            &--comment-count {
-                color: $color-gray-tertiary;
-                font-weight: 600;
-            }
-        }
+        @include hero-content;
 
         .btn {
             @extend %site-btn;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 66px;
-            right: -76px;
-            height: rem-calc(3);
-            width: rem-calc(64);
-            background-color: $color-licorice;
-
         }
     }
 
     .image {
         max-width: 100%;
         height: rem-calc(600);
+
+        @media screen and (max-width: 930px) {
+            height: rem-calc(300);
+        }
+
+        @media screen and (max-width: $mobile) {
+            height: rem-calc(200);
+        }
+
+        @media screen and (max-width: $mobile-small) {
+            height: rem-calc(150);
+        }
+
         img {
             height: 100%;
             object-fit: cover;
