@@ -166,7 +166,7 @@ img {
 .block.header.active .col.menu {
   display: block;
   position: absolute;
-  top: 64px;
+  top: 60px;
   left: 0;
   background-color: #fff;
   width: 100%;
