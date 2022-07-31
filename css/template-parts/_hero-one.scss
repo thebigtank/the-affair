@@ -19,27 +19,27 @@
 
     .content {
         text-align: right;
+        position: relative;
         &__head {
+            @include flex(flex, center, flex-end);
+            gap: rem-calc(10);
             text-transform: uppercase;
-            font-weight: 500;
-            font-size: rem-calc(13);
+            font-size: rem-calc(12);
             margin-bottom: rem-calc(28);
 
             &--tag {
-                display: inline-block;
+                @include flex(inline-flex, center, flex-end);
+                font-weight: 600;
                 position: relative;
                 color: $color-gold;
-                ion-icon {
-                    display: inline-block;
-                    vertical-align: middle;
-                    position: relative;
-                    bottom: 2px;
+                strong {
+                    margin: 0 rem-calc(6);
                 }
             }
 
             &--title {
-                letter-spacing: rem-calc(4);
-                margin-left: rem-calc(20);
+                font-weight: 500;
+                letter-spacing: rem-calc(3);
             }
         }
 
@@ -66,18 +66,19 @@
             }
         }
 
-        a {
-            text-transform: uppercase;
-            font-size: rem-calc(12);
-            font-weight: 700;
-            @include flex(inline-flex, center, center);
+        .btn {
+            @extend %site-btn;
+        }
 
-            span {
-                display: block;
-                margin-right: rem-calc(6);
-                border-bottom: 1px solid $color-gray;
-                padding-bottom: 2px;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 66px;
+            right: -76px;
+            height: rem-calc(3);
+            width: rem-calc(64);
+            background-color: $color-licorice;
+
         }
     }
 
