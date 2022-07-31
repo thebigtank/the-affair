@@ -87,7 +87,7 @@ img {
   overflow: hidden;
 }
 
-.block.header .wrapper {
+.block.landing .wrapper, .block.header .wrapper {
   margin-left: auto;
   margin-right: auto;
   max-width: 75rem;
@@ -97,12 +97,12 @@ img {
 
 .block.header {
   background-color: #fff;
+  padding: 0.625rem 0;
 }
 .block.header .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 0;
 }
 .block.header .col.logo {
   display: flex;
@@ -166,8 +166,9 @@ img {
 .block.header.active .col.menu {
   display: block;
   position: absolute;
-  top: 60px;
+  top: 3.75rem;
   left: 0;
+  z-index: 99;
   background-color: #fff;
   width: 100%;
   height: 100vh;
@@ -178,4 +179,58 @@ img {
 }
 .block.header.active .menu__main--item {
   padding-left: 1.5rem;
+}
+
+.block.landing {
+  position: relative;
+  height: 28.125rem;
+  padding: 2.8125rem 0;
+  background: url("https://res.cloudinary.com/dgivmm3yn/image/upload/v1659232876/cld-sample-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+}
+@media screen and (max-width: 1024px) {
+  .block.landing {
+    height: 21.875rem;
+  }
+}
+.block.landing::before {
+  content: "";
+  background: #555555;
+  opacity: 0.18;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.block.landing .wrapper {
+  position: relative;
+}
+.block.landing .title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.375rem;
+  color: #f8f8f8;
+}
+@media screen and (max-width: 1200px) {
+  .block.landing .title {
+    font-size: 7.8125rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .block.landing .title {
+    font-size: 5.9375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block.landing .title {
+    font-size: 4.6875rem;
+  }
 }/*# sourceMappingURL=main.css.map */

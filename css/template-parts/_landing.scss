@@ -1,0 +1,51 @@
+.block.landing {
+    position: relative;
+    height: rem-calc(450);
+    padding: rem-calc(45) 0;
+    background: url('https://res.cloudinary.com/dgivmm3yn/image/upload/v1659232876/cld-sample-4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(flex, center, initial);
+
+    @media screen and (max-width: $tablet-large) {
+        height: rem-calc(350);
+    }
+
+    &::before {
+        content: "";
+        background: $color-gray-tertiary;
+        opacity: .18;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+    }
+
+    .wrapper {
+        @extend %site-wrapper;
+        position: relative;
+    }
+
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: rem-calc(175);
+        font-weight: 700;
+        letter-spacing: rem-calc(6);
+        color: $color-off-white;
+
+        @media screen and (max-width: $desktop-small) {
+            font-size: rem-calc(125);
+        }
+
+        @media screen and (max-width: $tablet-large) {
+            font-size: rem-calc(95);
+        }
+
+        @media screen and (max-width: $tablet-small) {
+            font-size: rem-calc(75);
+        }
+    }
+}
