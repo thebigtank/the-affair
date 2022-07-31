@@ -58,6 +58,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  background-color: #f8f8f8;
   color: #252525;
   line-height: 1.4;
 }
@@ -94,16 +95,19 @@ img {
   padding: 0 2.5rem;
 }
 
+.block.header {
+  background-color: #fff;
+}
 .block.header .row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.625rem 0;
 }
 .block.header .col.logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .block.header .col.logo {
@@ -117,25 +121,25 @@ img {
 }
 .block.header .hamburger {
   display: none;
-  width: 32px;
-  height: 32px;
-  font-size: 64px;
-  align-items: center;
-  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 @media screen and (max-width: 768px) {
   .block.header .hamburger {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
+}
+.block.header .hamburger ion-icon {
+  transform: scale(1.5);
 }
 .block.header .hamburger .close {
   display: none;
 }
 .block.header .menu__main {
   display: flex;
-}
-.block.header .menu__main--item {
-  margin-left: 1.375rem;
+  gap: 1.375rem;
 }
 .block.header .menu__main--item a {
   text-transform: uppercase;
