@@ -92,7 +92,7 @@ img {
   margin-right: auto;
   max-width: 75rem;
   width: 100%;
-  padding: 0 2.5rem;
+  padding: 0 1.5rem;
 }
 
 .block.header {
@@ -162,4 +162,20 @@ img {
 }
 .block.header.active .hamburger .close {
   display: block;
+}
+.block.header.active .col.menu {
+  display: block;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  padding-top: 1.125rem;
+}
+.block.header.active .menu__main {
+  flex-direction: column;
+}
+.block.header.active .menu__main--item {
+  padding-left: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
