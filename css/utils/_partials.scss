@@ -1,0 +1,10 @@
+.bg-mediumgray {
+    background-color: $color-mediumgray;
+    color: $color-lightestgray;
+    span {
+        color: $color-lightestgray !important;
+    }
+    ::after {
+        background-color: $color-off-white !important;
+    }
+}

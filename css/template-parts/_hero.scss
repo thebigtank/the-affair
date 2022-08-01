@@ -23,6 +23,10 @@
             box-sizing: border-box;
             @include flex(flex, center, flex-end);
 
+            @media screen and (max-width: $tablet-small) {
+                padding-left: rem-calc(22);
+            }
+
             @media screen and (max-width: $mobile) {
                 padding: rem-calc(22);
             }
@@ -41,6 +45,7 @@
     .content {
         text-align: right;
         position: relative;
+        width: 280px;
         @include hero-content;
 
         .btn {
@@ -68,6 +73,84 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+    }
+
+    &.style-2 {
+        .row {
+            grid-template-columns: 2fr 1fr;
+
+            @media screen and (max-width: 930px) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .col {
+            &:nth-child(2) {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .image {
+            max-width: 100%;
+            height: rem-calc(600);
+
+            @media screen and (max-width: 930px) {
+                height: rem-calc(300);
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    &.content-right {
+        .col {
+            &:nth-child(1) {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0;
+
+                @media screen and (max-width: 930px) {
+                    grid-template-columns: auto;
+                }
+            }
+
+            &:nth-child(2) {
+                padding: rem-calc(42);
+                box-sizing: border-box;
+                @include flex(flex, center, flex-start);
+
+                @media screen and (max-width: $tablet-small) {
+                    padding-left: rem-calc(22);
+                }
+
+                @media screen and (max-width: $mobile) {
+                    padding: rem-calc(22);
+                }
+            }
+        }
+
+        .content {
+            text-align: left;
+            @include hero-content;
+
+            &__head {
+                justify-content: flex-start;
+            }
+
+            &::after {
+                left: rem-calc(-76);
+
+                @media screen and (max-width: $mobile) {
+                    left: rem-calc(-40);
+                }
+
+            }
         }
     }
 }

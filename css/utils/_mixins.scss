@@ -15,6 +15,7 @@
 
         @media screen and (max-width: $mobile) {
             font-size: rem-calc(10);
+			margin-bottom: rem-calc(20);
         }
 
 		&--tag {
@@ -40,9 +41,15 @@
 		line-height: rem-calc(30);
 		margin-bottom: rem-calc(18);
 
+        @media screen and (max-width: $tablet-small) {
+            font-size: rem-calc(20);
+            line-height: rem-calc(24);
+        }
+
         @media screen and (max-width: $mobile) {
             font-size: rem-calc(16);
             line-height: rem-calc(20);
+			font-weight: 700;
         }
 	}
 	
@@ -68,7 +75,7 @@
 		}
 		&--comment-count {
 			color: $color-gray-tertiary;
-			font-weight: 600;
+			font-weight: 500;
 		}
 	}
 
@@ -82,7 +89,7 @@
 		background-color: $color-licorice;
 
         @media screen and (max-width: $mobile) {
-            top: rem-calc(60);
+            top: rem-calc(50);
             right: rem-calc(-40);
             height: rem-calc(2);
             width: rem-calc(32);
