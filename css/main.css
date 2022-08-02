@@ -268,7 +268,7 @@ img {
 }
 .block.hero .row {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 @media screen and (max-width: 930px) {
   .block.hero .row {
@@ -420,13 +420,14 @@ img {
 }
 .block.hero .image img {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
 .block.hero.style-2 .row {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 }
 @media screen and (max-width: 930px) {
   .block.hero.style-2 .row {
