@@ -443,7 +443,7 @@ img {
 }
 @media screen and (max-width: 930px) {
   .block.hero.style-2 .image {
-    height: 18.75rem;
+    height: 100%;
   }
 }
 .block.hero.style-2 .image img {
