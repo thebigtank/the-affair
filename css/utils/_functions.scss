@@ -1,7 +1,6 @@
 // Rem Calculation of Pixel Values
 @use "sass:math";
 
-'
 $rem-base: 16px;
 
 @function strip-unit($num) {
