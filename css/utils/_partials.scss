@@ -1,6 +1,6 @@
 .bg-mediumgray {
-    background-color: $color-mediumgray;
-    color: $color-lightestgray;
+    background-color: $color-mediumgray !important;
+    color: $color-lightestgray !important;
     span {
         color: $color-lightestgray !important;
     }

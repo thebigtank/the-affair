@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif&display=swap");
 .bg-mediumgray {
-  background-color: #666;
-  color: #eee;
+  background-color: #9498a1 !important;
+  color: #eee !important;
 }
 .bg-mediumgray span {
   color: #eee !important;
@@ -275,6 +275,9 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+.block.hero .col {
+  background-color: #fff;
+}
 .block.hero .col:nth-child(1) {
   padding: 2.625rem;
   box-sizing: border-box;
@@ -304,7 +307,7 @@ img {
 .block.hero .content {
   text-align: right;
   position: relative;
-  width: 330px;
+  width: 250px;
 }
 .block.hero .content__head {
   display: flex;
@@ -477,6 +480,14 @@ img {
 }
 @media screen and (max-width: 930px) {
   .block.hero.reverse .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.block.hero.content-left .row {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+@media screen and (max-width: 930px) {
+  .block.hero.content-left .row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }/*# sourceMappingURL=main.css.map */
