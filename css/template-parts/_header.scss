@@ -102,6 +102,10 @@
             flex-direction: column;
             &--item {
                 padding-left: rem-calc(24);
+
+                a {
+                    font-size: rem-calc(16);
+                }
             }
         }
     }
