@@ -37,7 +37,7 @@
 	&__title {
 		text-transform: capitalize;
 		font-size: rem-calc(26);
-		font-weight: 800;
+		font-weight: 700;
 		line-height: rem-calc(30);
 		margin-bottom: rem-calc(18);
 
@@ -49,7 +49,7 @@
         @media screen and (max-width: $mobile) {
             font-size: rem-calc(16);
             line-height: rem-calc(20);
-			font-weight: 700;
+			font-weight: 600;
         }
 	}
 	

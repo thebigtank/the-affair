@@ -294,7 +294,7 @@ img {
 }
 .block.hero .col:nth-child(2) {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 @media screen and (max-width: 930px) {
   .block.hero .col:nth-child(2) {
@@ -304,7 +304,7 @@ img {
 .block.hero .content {
   text-align: right;
   position: relative;
-  width: 280px;
+  width: 330px;
 }
 .block.hero .content__head {
   display: flex;
@@ -339,7 +339,7 @@ img {
 .block.hero .content__title {
   text-transform: capitalize;
   font-size: 1.625rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.875rem;
   margin-bottom: 1.125rem;
 }
@@ -353,7 +353,7 @@ img {
   .block.hero .content__title {
     font-size: 1rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 .block.hero .content__details {
@@ -455,127 +455,11 @@ img {
      object-position: center;
 }
 .block.hero.content-right .col:nth-child(1) {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0;
-}
-@media screen and (max-width: 930px) {
-  .block.hero.content-right .col:nth-child(1) {
-    grid-template-columns: auto;
-  }
-}
-.block.hero.content-right .col:nth-child(2) {
-  padding: 2.625rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
+  order: 2;
   justify-content: flex-start;
-}
-@media screen and (max-width: 768px) {
-  .block.hero.content-right .col:nth-child(2) {
-    padding-left: 1.375rem;
-  }
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .col:nth-child(2) {
-    padding: 1.375rem;
-  }
 }
 .block.hero.content-right .content {
   text-align: left;
-}
-.block.hero.content-right .content__head {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.4375rem;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  margin-bottom: 1.75rem;
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .content__head {
-    font-size: 0.625rem;
-    margin-bottom: 1.25rem;
-  }
-}
-.block.hero.content-right .content__head--tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-weight: 600;
-  position: relative;
-  color: #d4a373;
-}
-.block.hero.content-right .content__head--tag strong {
-  margin: 0 0.375rem;
-}
-.block.hero.content-right .content__head--title {
-  font-weight: 500;
-  letter-spacing: 0.1875rem;
-}
-.block.hero.content-right .content__title {
-  text-transform: capitalize;
-  font-size: 1.625rem;
-  font-weight: 800;
-  line-height: 1.875rem;
-  margin-bottom: 1.125rem;
-}
-@media screen and (max-width: 768px) {
-  .block.hero.content-right .content__title {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .content__title {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-  }
-}
-.block.hero.content-right .content__details {
-  font-family: "Noto Serif", serif;
-  text-transform: capitalize;
-  font-size: 0.8125rem;
-  margin-bottom: 4rem;
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .content__details {
-    font-size: 0.6875rem;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-.block.hero.content-right .content__details--date {
-  color: #999;
-  font-size: 0.75rem;
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .content__details--date {
-    font-size: 0.625rem;
-  }
-}
-.block.hero.content-right .content__details--comment-count {
-  color: #555555;
-  font-weight: 500;
-}
-.block.hero.content-right .content::after {
-  content: "";
-  position: absolute;
-  top: 4.125rem;
-  right: -4.75rem;
-  height: 0.1875rem;
-  width: 4rem;
-  background-color: #252525;
-}
-@media screen and (max-width: 576px) {
-  .block.hero.content-right .content::after {
-    top: 3.125rem;
-    right: -2.5rem;
-    height: 0.125rem;
-    width: 2rem;
-  }
 }
 .block.hero.content-right .content__head {
   justify-content: flex-start;
@@ -586,5 +470,13 @@ img {
 @media screen and (max-width: 576px) {
   .block.hero.content-right .content::after {
     left: -2.5rem;
+  }
+}
+.block.hero.reverse .row {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+@media screen and (max-width: 930px) {
+  .block.hero.reverse .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }/*# sourceMappingURL=main.css.map */

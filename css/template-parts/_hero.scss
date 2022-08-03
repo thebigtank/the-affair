@@ -34,7 +34,7 @@
 
         &:nth-child(2) {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
             @media screen and (max-width: 930px) {
                 grid-template-columns: auto;
@@ -45,7 +45,7 @@
     .content {
         text-align: right;
         position: relative;
-        width: 280px;
+        width: 330px;
         @include hero-content;
 
         .btn {
@@ -111,34 +111,14 @@
 
     &.content-right {
         .col {
-            &:nth-child(1) {
-                display: grid;
-                grid-template-columns: 1fr;
-                padding: 0;
-
-                @media screen and (max-width: 930px) {
-                    grid-template-columns: auto;
-                }
-            }
-
-            &:nth-child(2) {
-                padding: rem-calc(42);
-                box-sizing: border-box;
-                @include flex(flex, center, flex-start);
-
-                @media screen and (max-width: $tablet-small) {
-                    padding-left: rem-calc(22);
-                }
-
-                @media screen and (max-width: $mobile) {
-                    padding: rem-calc(22);
-                }
+            &:nth-child(1)  {
+                order: 2;
+                justify-content: flex-start;
             }
         }
 
         .content {
             text-align: left;
-            @include hero-content;
 
             &__head {
                 justify-content: flex-start;
@@ -151,6 +131,16 @@
                     left: rem-calc(-40);
                 }
 
+            }
+        }
+    }
+
+    &.reverse {
+        .row {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+            @media screen and (max-width: 930px) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
     }
