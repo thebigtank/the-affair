@@ -12,10 +12,13 @@ html {
 body {
 	font-family: $font-montserrat;
 	overflow-x: hidden;
-	overflow-y: hidden;
 	background-color: $color-off-white;
 	color: $color-licorice;
 	line-height: 1.4;
+
+	&.mobile-menu {
+		overflow-y: hidden;
+	}
 }
 
 a {

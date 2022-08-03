@@ -69,10 +69,12 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #f8f8f8;
   color: #252525;
   line-height: 1.4;
+}
+body.mobile-menu {
+  overflow-y: hidden;
 }
 
 a {
