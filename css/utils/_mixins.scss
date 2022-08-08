@@ -4,96 +4,96 @@
     justify-content: $justify;
 }
 
-@mixin hero-content {
+// @mixin hero-content {
 
-	&__head {
-		@include flex(flex, center, flex-end);
-		gap: rem-calc(7);
-		text-transform: uppercase;
-		font-size: rem-calc(12);
-		margin-bottom: rem-calc(28);
+// 	&__head {
+// 		@include flex(flex, center, flex-end);
+// 		gap: rem-calc(7);
+// 		text-transform: uppercase;
+// 		font-size: rem-calc(12);
+// 		margin-bottom: rem-calc(28);
 
-        @media screen and (max-width: $mobile) {
-            font-size: rem-calc(10);
-			margin-bottom: rem-calc(20);
-        }
+//         @media screen and (max-width: $mobile) {
+//             font-size: rem-calc(10);
+// 			margin-bottom: rem-calc(20);
+//         }
 
-		&--tag {
-			@include flex(inline-flex, center, flex-end);
-			font-weight: 600;
-			position: relative;
-			color: $color-gold;
-			strong {
-				margin: 0 rem-calc(6);
-			}
-		}
+// 		&--tag {
+// 			@include flex(inline-flex, center, flex-end);
+// 			font-weight: 600;
+// 			position: relative;
+// 			color: $color-gold;
+// 			strong {
+// 				margin: 0 rem-calc(6);
+// 			}
+// 		}
 
-		&--title {
-			font-weight: 500;
-			letter-spacing: rem-calc(3);
-		}
-	}
+// 		&--title {
+// 			font-weight: 500;
+// 			letter-spacing: rem-calc(3);
+// 		}
+// 	}
 
-	&__title {
-		text-transform: capitalize;
-		font-size: rem-calc(26);
-		font-weight: 700;
-		line-height: rem-calc(30);
-		margin-bottom: rem-calc(18);
+// 	&__title {
+// 		text-transform: capitalize;
+// 		font-size: rem-calc(26);
+// 		font-weight: 700;
+// 		line-height: rem-calc(30);
+// 		margin-bottom: rem-calc(18);
 
-        @media screen and (max-width: $tablet-small) {
-            font-size: rem-calc(20);
-            line-height: rem-calc(24);
-        }
+//         @media screen and (max-width: $tablet-small) {
+//             font-size: rem-calc(20);
+//             line-height: rem-calc(24);
+//         }
 
-        @media screen and (max-width: $mobile) {
-            font-size: rem-calc(16);
-            line-height: rem-calc(20);
-			font-weight: 600;
-        }
-	}
+//         @media screen and (max-width: $mobile) {
+//             font-size: rem-calc(16);
+//             line-height: rem-calc(20);
+// 			font-weight: 600;
+//         }
+// 	}
 	
-	&__details {
-		font-family: $font-noto;
-		text-transform: capitalize;
-		font-size: rem-calc(13);
-		margin-bottom: rem-calc(64);
+// 	&__details {
+// 		font-family: $font-noto;
+// 		text-transform: capitalize;
+// 		font-size: rem-calc(13);
+// 		margin-bottom: rem-calc(64);
 
-        @media screen and (max-width: $mobile) {
-            font-size: rem-calc(11);
-            display: flex;
-            flex-direction: column-reverse;
-        }
+//         @media screen and (max-width: $mobile) {
+//             font-size: rem-calc(11);
+//             display: flex;
+//             flex-direction: column-reverse;
+//         }
 
-		&--date {
-			color: $color-lightgray;
-			font-size: rem-calc(12);
+// 		&--date {
+// 			color: $color-lightgray;
+// 			font-size: rem-calc(12);
 
-            @media screen and (max-width: $mobile) {
-                font-size: rem-calc(10);
-            }
-		}
-		&--comment-count {
-			color: $color-gray-tertiary;
-			font-weight: 500;
-		}
-	}
+//             @media screen and (max-width: $mobile) {
+//                 font-size: rem-calc(10);
+//             }
+// 		}
+// 		&--comment-count {
+// 			color: $color-gray-tertiary;
+// 			font-weight: 500;
+// 		}
+// 	}
 
-	&::after {
-		content: "";
-		position: absolute;
-		top: rem-calc(66);
-		right: rem-calc(-76);
-		height: rem-calc(3);
-		width: rem-calc(64);
-		background-color: $color-licorice;
+// 	&::after {
+// 		content: "";
+// 		position: absolute;
+// 		top: rem-calc(66);
+// 		right: rem-calc(-76);
+// 		height: rem-calc(3);
+// 		width: rem-calc(64);
+// 		background-color: $color-licorice;
 
-        @media screen and (max-width: $mobile) {
-            top: rem-calc(50);
-            right: rem-calc(-40);
-            height: rem-calc(2);
-            width: rem-calc(32);
-        }
+//         @media screen and (max-width: $mobile) {
+//             top: rem-calc(50);
+//             right: rem-calc(-40);
+//             height: rem-calc(2);
+//             width: rem-calc(32);
+//         }
 
-	}
-}
+// 	}
+// }
