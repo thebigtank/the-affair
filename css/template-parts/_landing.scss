@@ -35,6 +35,10 @@
         font-weight: 700;
         letter-spacing: rem-calc(6);
         color: $color-off-white;
+        // Animation with gsap
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        opacity: 0;
+        transform: translateY(100px);
 
         @media screen and (max-width: $desktop-small) {
             font-size: rem-calc(110);
